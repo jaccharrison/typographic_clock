@@ -28,6 +28,8 @@ function parseTime(d) {
     /* parse hours */
     if (hours === 12) {
 	hours = "noon";
+    } else if (hours === 0) {
+	hours = "midnight";
     } else {
 	hours = hours > 12 ? countingNumbers[hours-12] : countingNumbers[hours];
     }
